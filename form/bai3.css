@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+    font-size: 35px;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.signin{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+    padding: 50px;
+}
+
+input{
+    border:0;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 400px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.left div{
+    padding-top: 20px ;
+}
+
+button[type=submit]{
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+
+.right{
+    color: white;
+    height: 400px;
+    width: 400px;
+    background-image: url(background.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.link{
+    height: 40px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.link.Fb{
+    background-color: blue;
+}
+
+.link.Tw{
+    background-color: aqua;
+}
+
+.link.Gg{
+    background-color: orange;
+}
+
+#or{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: cornflowerblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 670px;
+    right: 835px;
+}

@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     padding: 50px;
-    background-color: rgb(112, 65, 65);
+    background-color:#fec7d7;
 }
 
 .row{
@@ -40,7 +40,7 @@ input{
 
 .title{
     font-weight: bold;
-    color: rgb(127, 211, 0);
+    color: #0e172c;
     padding: 10px 0;
 }
 
@@ -64,11 +64,13 @@ input[type=radio]{
 }
 
 input[type=radio]:checked + .check {
-    background-color:  #0DFF92 ;
+    background-color:  #0e172c;
+    color: wheat;
 }
 
 input[type=radio]:checked + .check i{
-    background-color:  #0DFF92 ;
+    background-color:  #0e172c;
+    color: wheat;
 }
 
 .col_3{
@@ -85,9 +87,10 @@ input[type=radio]:checked + .check i{
     display: flex;
 }
 
-.ngu{
+i.ngu{
     height: 21px;
     width: 24.17px;
+    border: 1px solid rgb(138, 133, 133);
 }
 
 select{
