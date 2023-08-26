@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e1aaf64c7e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bai2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="register">
+        <form action="#">
+            <div class="row">
+                <p class="title">Acount</p>
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Full name">
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="row col">
+                <div class="col">
+                    <p class="title">Date of Birth</p>
+                </div>
+                <div class="col">
+                    <p class="title">Gender</p>
+                </div>
+            </div>
+            <div class="row col">
+                <div class="col_3">
+                    <input type="number" min="1" max="31" placeholder="DD">
+                    <input type="number" min="1" max="12" placeholder="MM">
+                    <input type="number" min="1000" max="3000" placeholder="YYYY" id="year" >
+                </div>
+                <div class="col_2">
+                    <div class="col radio">
+                        <input type="radio" name="sex" value="male" id="sex">
+                         <div class="check">Male</div>
+                    </div>
+                    <div class="col radio">
+                        <input type="radio" name="sex" value="female" id="sex">
+                        <div class="check">Female</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="row">
+                <p class="title">Payment details</p>
+            </div>
+            <div class="row col">
+                <div class="col radio">
+                    <input type="radio" name="payment" value="Credit card" id="card">
+                     <div class="check"><i class="fa-solid fa-credit-card"></i>credit card</div>
+                </div>
+                <div class="col radio">
+                    <input type="radio" name="payment" value="Paypal" id="cart">
+                    <div class="check"><i class="fa-solid fa-money-check-dollar"></i>pay pal</div>
+                </div>
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-money-check-dollar"></i>
+                <input type="number" placeholder="Card number">
+            </div>
+            <div class="row col">
+                <div class="col_ip">
+                    <i class="fa-solid fa-user ngu"></i>
+                    <input type="text" placeholder="Full name">
+                </div>
+                <div class="col_2">
+                    <div>
+                        <select name="date" id="date">
+                            <option value="01 Jan">01 Jan</option>
+                            <option value="01 Jan">01 Feb</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="Year" id="Year">
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
