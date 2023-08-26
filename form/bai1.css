@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    border: 0;
+}
+table{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}   
+
+input{
+    height: 45px;
+    width: 250px;
+    border: 1px solid black;
+}
+select{
+    height: 47px;
+    width: 262px;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+
+table{
+    /* border-collapse: collapse ; */
+    border-spacing : 0px 10px ;
+}
+
+tr{
+    padding: 10px;
+}
+
+.colum1{
+    text-align: end;
+}
+
+.colum2{
+    width: 80px;
+    text-align: end;
+}
+
+.colum2 i{
+    background-color: rgb(255, 72, 0);
+    padding: 15px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+}
+
+#submit{
+    text-align: center;
+}
+
+input[type=text],input[type=email],input[type=password],input[type=tel]{
+    padding-left: 10px;
+}
+
+input[type=submit]{
+    background-color:  rgb(255, 72, 0);
+}
