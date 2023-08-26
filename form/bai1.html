@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="bai1.css">
 </head>
 <body>
+    <form action="bai1.html">
     <table>
         <tr>
             <td class="colum1"><label for="Fname">First name</label></td>
             <td class="colum2"><i class="fa-solid fa-user"></i></td>
-            <td class="colum3"><input type="text" id="Fname" placeholder="First name"></td>
+            <td class="colum3"><input type="text" id="Fname" placeholder="First name" required></td>
         </tr>
         <tr>
             <td class="colum1"><label for="Lname">Last name</label></td>
             <td class="colum2"><i class="fa-solid fa-user"></i></td>
-            <td class="colum3"><input type="text" id="Lname" placeholder="Last name"></td>
+            <td class="colum3"><input type="text" id="Lname" placeholder="Last name" required></td>
         </tr>
         <tr>
             <td class="colum1"><label for="place">Department/office</label></td>
@@ -32,33 +33,35 @@
         <tr>
             <td class="colum1"><label for="Uname">User name</label></td>
             <td class="colum2"><i class="fa-solid fa-user"></i></td>
-            <td class="colum3"><input type="text" id="Uname" placeholder="Username"></td>
+            <td class="colum3"><input type="text" id="Uname" placeholder="Username" required></td>
         </tr>
         <tr>
             <td class="colum1"><label for="pw">Password</label></td>
             <td class="colum2"><i class="fa-solid fa-user"></i></td>
-            <td class="colum3"><input type="password" id="pw" placeholder="Password"></td>
+            <td class="colum3"><input type="password" id="pw" placeholder="Password" required></td>
         </tr>
         <tr>
             <td class="colum1"><label for="cpw">Confirm Password</label></td>
             <td class="colum2"><i class="fa-solid fa-user"></i></td>
-            <td class="colum3"><input type="password" id="cpw" placeholder="Confirm Password"></td>
+            <td class="colum3"><input type="password" id="cpw" placeholder="Confirm Password" required></td>
         </tr>
         <tr>
             <td class="colum1"><label for="mail">E-Mail</label></td>
             <td class="colum2"><i class="fa-solid fa-envelope"></i></td>
-            <td class="colum3"><input type="email" id="mail" placeholder="E-Mail Address"></td>
+            <td class="colum3"><input type="email" id="mail" placeholder="E-Mail Address" required></td>
         </tr>
         <tr>
             <td class="colum1"><label for="phone">Contact No</label></td>
             <td class="colum2"><i class="fa-solid fa-phone"></i></td>
-            <td class="colum3"><input type="tel" id="phone" placeholder="Your phone number"></td>
+            <td class="colum3"><input type="tel" id="phone" placeholder="Your phone number" required></td>
         </tr>
         <tr>
             <td colspan="3" id="submit">
-                <input type="submit" value="submit">
+                <!-- <input type="submit" value="submit"> -->
+                <button type="submit" value="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
             </td>
         </tr>
     </table>
+    </form>
 </body>
 </html>
