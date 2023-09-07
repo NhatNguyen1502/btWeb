@@ -1,0 +1,12 @@
+/* @media screen and ( max-width : 840px) {
+    body {
+        color: blue;
+    }
+
+} */
+
+@media screen and (max-width : 841px) {
+    h1 {
+        color: red;
+    }
+}

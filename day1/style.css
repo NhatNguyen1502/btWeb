@@ -1,0 +1,18 @@
+table ,th,td, tr{
+    color: yellow;
+    background-color: red;
+    border: 1 black;
+    font-size: 14px ;
+    padding: 10px;
+    margin: auto;
+    border-color: black;
+}
+.xanh th {
+    background-color: blue;
+}
+.tim td{
+    background-color: purple;
+}
+.hong td {
+    background-color: rgb(231, 13, 79);
+}

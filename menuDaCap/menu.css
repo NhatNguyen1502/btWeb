@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header, nav{
+    margin: 5px 10%;
+}
+
+#container{
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    background-color: #484848;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.main-menu{
+    display: flex;
+    list-style-type: none;
+}
+
+.main-menu li a{
+    border-right: 1px solid white;
+    color: aliceblue;
+    display: block;
+    padding: 0 25px;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.main-menu li:hover> a{
+    background: red;
+    color: yellow;
+    opacity: .7;
+}
+
+.main-menu li{
+    position: relative;
+}
+
+.main-menu .sub-menu{
+    position: absolute;
+    background-color: #484848;
+    list-style-type: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+
+.main-menu li:hover> .sub-menu{
+    display: block;
+}
+
+.main-menu ul.sub-menu a{
+    border-top: 1px solid white;
+    padding: 10px auto;
+    width: 300px;
+    left: 0;
+
+}
+
+.main-menu ul li:hover> a{
+    background: red;
+    color: yellow;
+}
+
+.main-menu ul.sub-menu ul.sub-menu{
+    left:351px;
+    top:0px;
+}
+
+.sub-menu-item{
+    background-color: #747171;
+}
+
+.sub-menu li:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sub-menu li:last-child:hover>a {
+    background: red;
+    color: yellow;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#first-item:hover>a{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+/* .main-menu li:first-child:hover>a{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+} */
