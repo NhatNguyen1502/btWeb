@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="if_case.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container bg-light">
+        <h1 class="text-center text-info">BẢNG ĐIỂM CỦA EM</h1>
+        <div class="row justify-content-center">
+            <div class="col-1 p-0">
+                <span>SEMESTER 1:</span>
+            </div>
+            <div class="col-3">
+                <input style="width: 300px;" type="number" id="semester1" max="10" min="0">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-1 p-0">
+                <span>SEMESTER 2:</span>
+            </div>
+            <div class="col-3">
+                <input style="width: 300px;" type="number" id="semester2" max="10" min="0">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-1 p-0">
+                <span>YEAR:</span>
+            </div>
+            <div class="col-3">
+                <select style="width : 50px; color: red" id="select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-1 p-0">
+                <span>Sumarise:</span>
+            </div>
+            <div class="col-3">
+                <input type="text" style="width: 300px;" id="output1">
+            </div>
+        </div>
+        <div class="row justify-content-center" style="height: 100px;">
+            <p style="width: 300px; background-color: white; border: 1px black solod;" class="text-danger fs-1" id="output2" ></p>
+        </div>
+        <div id="form-horizontal">
+            <div class="row">
+                <div class="col-4">
+                </div>
+                <div class="col-2 text-end">
+                    <input type="button" name="ok" id="ok" value="ok" onclick="function1()">
+                </div>
+                <div class="col-2 text-center">
+                    <input type="button" name="cancel" id="cancel" value="cancel" onclick="function2()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
