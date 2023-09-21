@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center pb-5">SUPER SUPER SHOP PHONE</h1>
+       <div class="row pb-3">
+            <label for="name" class="col-4">
+                Product Name
+                <input type="text" id="name">
+            </label>
+            <label for="name" class="col-4">
+                Product Picture
+                <input type="file" id="file">
+            </label>
+            <label for="price" class="col-4">
+                Product Price
+                <input type="number" id="price">
+            </label>
+       </div>
+       <button class="btn btn-dark mb-5" onclick="add()">Add</button>
+       <p class="fs-3 fw-bold">ĐIỆN THOẠI NỔI BẬT NHẤT</p>
+       <hr style="height: 5px;">
+       <div class="row mt-3" id="product">
+       </div>
+
+       <script>
+            function add() {
+                let name = document.getElementById('name').value;
+                let picture = document.getElementById('file').value;
+                let price = document.getElementById('price').value;
+                let image = picture.slice(12);
+                let html = `
+                    <div class="col-4 border d-flex flex-column">
+                        <img src="${image}" alt="dien thoai" class"mw-100 justify-content-center">
+                        <div class="body text-center">
+                            <h5>${name}</h5>
+                            <p class"text-center">${price}đ</p>
+                            <a href="#" class="btn btn-check">Buy</a>
+                        </div>
+                    </div>`;
+                document.getElementById('product').innerHTML +=html;
+            }  
+       </script>
+    </div>
+</body>
+</html>

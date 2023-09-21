@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Clothes</h1>
+        <div class="row m-2">
+            <label for="name" class="col-3 cent">Product Name</label>
+            <input type="text" class="col-4" id="name" style="width : 300px;">
+        </div>
+        <div class="row m-2">
+            <label for="quantity" class="col-3">Product Quantity</label>
+            <input type="text" id="quantity" style="width : 300px;">
+        </div>
+        <div class="row m-2">
+            <label for="price" class="col-3">Product price</label>
+            <input type="text" id="price" style="width : 300px;">
+        </div>
+        <div class="row m-3 ps-0">
+            <button type="button" class="btn btn-dark col-2 ps-0 me-2" onclick="sell()">Add</button>
+        </div>
+        <table class="table table-dark mt-3" id="table">
+            <thead>
+                <tr class="text-center">
+                    <td>No</td>
+                    <td>Product name</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Sub total</td>
+                </tr>
+            </thead>
+        </table>
+        <span class="fw-bold">Total: </span> <span id="total"></span>
+    </div>
+    <script>
+        let id = 0;
+        let total = 0;
+        function sell() {
+            id++;
+            let row = '<tr class="text-center">';
+            let name = document.getElementById('name').value;
+            let quantity = document.getElementById('quantity').value;
+            let price = document.getElementById('price').value;
+            let sub = quantity * price;
+            row += "<td>" + id + "</td>";
+            row += "<td>" + name + "</td>";
+            row += "<td>" + quantity + "</td>";
+            row += "<td>" + price + "</td>";
+            row += "<td>" + sub + "</td>";
+            row += "</tr>";
+            total += sub;
+            document.getElementById('table').innerHTML += row;
+            document.getElementById('total').innerHTML = total;
+            document.write(total);
+            document.write(total)
+            document.write(total)
+
+        }
+    </script>
+</body>
+</html>

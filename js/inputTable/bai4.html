@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>DISCOUNT</h1>
+        <form action="#!"> 
+            <h2>Hobbies</h2>
+            <div class="btn-group">
+                <input type="checkbox" class="btn-check" id="swim" value="Swimming">
+                <label class="btn btn-outline-primary" for="swim">Swimming</label>
+              
+                <input type="checkbox" class="btn-check" id="football" value="Football">
+                <label class="btn btn-outline-primary" for="football">Football</label>
+              
+                <input type="checkbox" class="btn-check" id="dance" value="Dancing">
+                <label class="btn btn-outline-primary" for="dance">Dancing</label>
+    
+                <input type="checkbox" class="btn-check" id="sing" value="Singing">
+                <label class="btn btn-outline-primary" for="sing">Singing</label>
+              </div>
+              <h2>Role</h2>
+              <div class="btn-group">
+                <input type="radio" class="btn-check" name="btnradio" id="sv" value="sv">
+                <label class="btn btn-outline-primary" for="sv">Sinh viên</label>
+              
+                <input type="radio" class="btn-check" name="btnradio" id="hs" value="hs">
+                <label class="btn btn-outline-primary" for="hs">Học sinh</label>
+              
+                <input type="radio" class="btn-check" name="btnradio" id="dl" value="dl">
+                <label class="btn btn-outline-primary" for="dl">Đi làm</label>
+              </div> <br>
+              <button type="button" class="btn btn-dark m-3" onclick="check()">Check</button>
+        </form>
+        <hr style="height: 5px;">
+        <div id="class"></div>
+        <div id="price"></div>
+        <div id="discount"></div>
+        <div id="fee"></div>
+    </div>
+
+    <script>
+        let check = () => {
+            var totalPrice = 0;
+            var discount = 0;
+            var choose ='';
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    choose += checkbox.value +", ";
+                    switch (checkbox.value) {
+                        case 'Swimming' :
+                        {
+                            totalPrice += 500;
+                            break;
+                        }
+                        case 'Dancing' :
+                        {
+                            totalPrice += 200;
+                            break;
+                        }
+                        case 'Football' :
+                        {
+                            totalPrice += 600;
+                            break;
+                        }
+                        case 'singing' :
+                        {
+                            totalPrice += 1000;
+                            break;
+                        }
+                    }
+                }
+                
+            });
+            let radioChecks = document.querySelectorAll('input[type = radio]');
+            radioChecks.forEach(function(checkRadio) {
+                if (checkRadio.checked) {
+                    if (checkRadio.value == 'sv') {
+                        discount = 10;
+                    }
+                    if (checkRadio.value == 'hs') {
+                        discount = 20;
+                        return 
+                    }
+                    if (checkRadio.value == 'dl') {
+                        discount = 30;
+                        return 
+                    }
+                }
+            })
+            document.getElementById('class').innerHTML = "Your class: " + choose.slice(0,-2) ;
+            document.getElementById('price').innerHTML = "Total payment: " + totalPrice + "đ";
+            document.getElementById('discount').innerHTML = "Discount: " + discount + "%";
+            document.getElementById('fee').innerHTML = "Tuition fee: " + (totalPrice - totalPrice*discount/100) + "đ";
+        }
+    </script>
+</body>
+</html>
