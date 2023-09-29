@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row pt-3 justify-content-center align-items-center text-center">
+            <div class="col-2">
+                <img src="../../../Image/PNVlogo.jpg" alt="logo" width="200px">
+            </div>
+            <div class="col-2">
+                <a class="nav-link text-dark" onclick="display('men')" href="#">Men fashion</a>
+            </div>
+            <div class="col-2">
+                <a class="nav-link text-dark" onclick="display('women')" href="#">Women fashion</a>
+            </div>
+            <div class="col-2">
+                <a class="nav-link text-dark" href="#">News</a>
+            </div>
+            <div class="col-4">
+                <input type="text" placeholder="Search">
+                <button type="button" class="btn btn-secondary">Search</button>
+            </div>
+        </div>
+
+        <div class="form">
+            <label for="id">ID:</label>
+            <input type="number" id="id">
+
+
+        </div>
+
+        <div class="row" id="output"></div>
+
+        <script>
+            let women = [
+                {
+                    id : 1,
+                    name : "Fashion 1",
+                    price : "200.000",
+                    img : "https://cbu01.alicdn.com/img/ibank/2020/721/577/22388775127_1159735690.jpg"
+                },
+                {
+                    id : 1,
+                    name : "Fashion 1",
+                    price : "200.000",
+                    img : "https://cbu01.alicdn.com/img/ibank/2020/721/577/22388775127_1159735690.jpg"
+                },
+                {
+                    id : 1,
+                    name : "Fashion 1",
+                    price : "200.000",
+                    img : "https://cbu01.alicdn.com/img/ibank/2020/721/577/22388775127_1159735690.jpg"
+                },
+                {
+                    id : 1,
+                    name : "Fashion 2",
+                    price : "200.000",
+                    img: "https://cbu01.alicdn.com/img/ibank/2020/916/321/22562123619_1159735690.jpg"
+                },
+                {
+                    id : 1,
+                    name : "Fashion 3",
+                    price : "200.000",
+                    img: 'https://cbu01.alicdn.com/img/ibank/2017/813/370/5282073318_307052022.jpg'
+                },
+                {
+                    id : 1,
+                    name : "Fashion 4",
+                    price : "200.000",
+                    img: 'https://cbu01.alicdn.com/img/ibank/2017/493/236/5280632394_307052022.jpg'
+                }
+            ]
+
+
+            let men = [
+                {
+                    id : 1,
+                    name : "Fashion 1",
+                    price : "200.000",
+                    img: 'https://shop.dazlinn.com/wp-content/uploads/2022/04/ao-so-mi-nam-oscar-tay-ng-n-046.jpg'
+                },
+                {
+                    id : 1,
+                    name : "Fashion 2",
+                    price : "200.000",
+                    img: 'https://shop.dazlinn.com/wp-content/uploads/2022/04/ao-so-mi-nam-oscar-tay-ng-n-045.jpg'
+                },
+                {
+                    id : 1,
+                    name : "Fashion 3",
+                    price : "200.000",
+                    img: 'https://shop.dazlinn.com/wp-content/uploads/2022/04/ao-so-mi-nam-oscar-tay-ng-n-047.jpg'
+
+                },
+                {
+                    id : 1,
+                    name : "Fashion 4",
+                    price : "200.000",
+                    img:'https://shop.dazlinn.com/wp-content/uploads/2022/04/ao-so-mi-nam-oscar-tay-dai-051.jpg'
+                }
+            ]
+
+            function display(check) {
+                let element = document.querySelector('#output');
+                element.innerHTML = (check == "men")? `<h2 class="text-center">MEN FASHION</h2>` : `<h2 class="text-center">WOMEN FASHION</h2>`;
+                let sex = (check == "men") ? men : women; 
+                sex.forEach(function(item){
+                    element.innerHTML += `
+                    <div class="col-sm-3 p-3 col-12">
+                        <div class="card" style="width: 18rem;">
+                            <img src="${item.img}" class="card-img-top round-5" style="height: 20rem; object-fit: cover;" alt="image">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.name}</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                })
+            }
+        </script>
+    </div>    
+</body>
+</html>
